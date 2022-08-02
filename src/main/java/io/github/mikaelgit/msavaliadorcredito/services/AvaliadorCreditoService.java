@@ -1,9 +1,9 @@
 package io.github.mikaelgit.msavaliadorcredito.services;
 
-import io.github.mikaelgit.msavaliadorcredito.dtos.DadosConsultaCartoesDTO;
+import io.github.mikaelgit.msavaliadorcredito.dtos.SituacaoClienteDTO;
 
 public interface AvaliadorCreditoService {
 
-    DadosConsultaCartoesDTO obterSituacaoCliente(String cpf);
+    SituacaoClienteDTO obterSituacaoCliente(String cpf);
     
 }
