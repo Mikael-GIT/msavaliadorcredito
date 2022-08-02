@@ -16,8 +16,8 @@ public class AvaliadorCreditoController {
     @Autowired
     private AvaliadorCreditoService avaliadorCreditoService;
 
-    @GetMapping(params = "cpf")
+    @GetMapping(value = "situacao-cliente" ,params = "cpf")
     public DadosConsultaCartoesDTO analisarCliente(@RequestParam("cpf") String cpf) {
-        return null;
+        return avaliadorCreditoService.obterSituacaoCliente(cpf);
     }
 }
