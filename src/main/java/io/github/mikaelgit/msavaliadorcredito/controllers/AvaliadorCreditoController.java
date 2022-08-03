@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.github.mikaelgit.msavaliadorcredito.exceptions.DadosClienteNotFoundException;
+import io.github.mikaelgit.msavaliadorcredito.exceptions.ErroComunicacaoMicroservices;
 import io.github.mikaelgit.msavaliadorcredito.services.AvaliadorCreditoService;
 
 @RestController
@@ -23,7 +25,7 @@ public class AvaliadorCreditoController {
     }
 
     @GetMapping(value = "situacao-cliente", params = "cpf")
-    public ResponseEntity analisarCliente(@RequestParam("cpf") String cpf) {
+    public ResponseEntity analisarCliente(@RequestParam("cpf") String cpf) throws DadosClienteNotFoundException {
         return ResponseEntity.ok(avaliadorCreditoService.obterSituacaoCliente(cpf));
     }
 }
