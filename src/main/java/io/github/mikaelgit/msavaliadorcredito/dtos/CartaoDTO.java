@@ -1,17 +1,21 @@
 package io.github.mikaelgit.msavaliadorcredito.dtos;
 
+import java.math.BigDecimal;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class DadosClienteDTO {
+public class CartaoDTO {
     
     private Long id;
 
-    private String cpf;
-
     private String nome;
 
-    private Integer idade;
+    private String bandeira;
+
+    private BigDecimal renda;
+
+    private BigDecimal limiteBasico;
 }

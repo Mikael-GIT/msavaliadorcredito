@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class SituacaoClienteDTO {
     
-    private DadosClienteDTO dadosCliente;
+    private Cliente dadosCliente;
 
     private List<DadosCartaoDTO> cartoes;
 }
